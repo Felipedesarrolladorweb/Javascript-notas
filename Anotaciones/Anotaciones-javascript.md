@@ -8,7 +8,7 @@ Son los diferentes tipos de contenidos que javascript puede recibir y leer, son 
 * **String**(Lo que conocemos como texto, javascript usa caracteres especiales para texto)
 * **Boolean**(Lógica comparativa a lo que decimos true(verdadero) o false(falso), también el código lo toma como 1 ó 0, como algo con valor o algo sin valor o vacío).  
 * **Undefined**(es la manera de javascript de avisar que un archuvo o variable no tiene un valor definido o está vacío cuando no debería)  
-* **Null**(Es lo mismo que undefined pero es usado de manera voluntaria por parte del programador para asignar como vacío o nulo deliberadamente un objeto, así le hace saber al motor de javascript y al programador que analice después el código que ese valor(Null) fué desginado por el programador por alguna razón).  
+* **Null**(Es lo mismo que undefined pero es usado de manera voluntaria por parte del programador para asignar como vacío o nulo deliberadamente un objeto, así le hace saber al motor de javascript y al programador que analice después el código que ese valor(Null) fué designado por el programador por alguna razón).  
 * **Object**(significa objeto, )
 
 ## Data Structures / Estructura de datos  
@@ -172,4 +172,28 @@ Si se requiere llamar un contenido de un objeto dentro de una lista o array se d
 certificateUsers[0].certificateArea;
 
 console.log(certificateUsers[0].certificateArea;) // -> computerscience
+```  
+
+También se pueden agregar functions dentro de objects, a esto se le llama  _**Methods**_, los métodos son funciones dentro de un object, ya hemos visto varios métodos como console.log(), list.sort(),etc, para que funcione los métodos correctamente a la hora de llamarlos se debe poner un paréntesis al final del nombre de la función, en el caso de console, la palabra console se refiere al objeto y la palabra log se refiere a una función que está dentro de console.ejm:  
+
+```javascript
+const user = {
+    name: 'Jhon',
+    shout: function() {
+        console.log('gritar');
+    }
+}
+
+user.shout() // -> 'gritar'
 ```
+
+Tanto los arrays como los objects pueden ser vacíos. ejm:  
+
+```javascript
+const objectVacio = {};  
+const items1 = [];
+
+console.log(objectVacio); // -> object {} 
+console.log(items1); // -> array []
+```
+
