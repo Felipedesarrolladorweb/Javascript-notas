@@ -1,5 +1,23 @@
 # Anotaciones Javascript
 
+## Javascript Types  
+
+Son los diferentes tipos de contenidos que javascript puede recibir y leer, son la unidad más básica que existe en el motor del código, también se le llaman **_primitive types_**:
+
+* **Number**(Los números que normalmente se usan)  
+* **String**(Lo que conocemos como texto, javascript usa caracteres especiales para texto)
+* **Boolean**(Lógica comparativa a lo que decimos true(verdadero) o false(falso), también el código lo toma como 1 ó 0, como algo con valor o algo sin valor o vacío).  
+* **Undefined**(es la manera de javascript de avisar que un archuvo o variable no tiene un valor definido o está vacío cuando no debería)  
+* **Null**(Es lo mismo que undefined pero es usado de manera voluntaria por parte del programador para asignar como vacío o nulo deliberadamente un objeto, así le hace saber al motor de javascript y al programador que analice después el código que ese valor(Null) fué desginado por el programador por alguna razón).  
+* **Object**(significa objeto, )
+
+## Data Structures / Estructura de datos  
+
+</br>  
+
+* Arrays  
+* Objects  
+
 ## Arrays  
 
 </br>  
@@ -78,3 +96,27 @@ array.reverse();
 console.log(array); // -> Array(3) [ "Kiwi", "Oranges", "Bluberries" ]
 console.log(array2[1][1]); // -> Array [ "Oranges" ]
 ```
+
+</br>  
+
+## Objects  
+
+</br>  
+
+Los objects(objetos), son parecidos a las arrays, pues almacenan una lista de varios items, la diferencia es que en objects se pueden guardar una propiedad y un valor por cada item. ejm:  
+
+arrays:  
+
+```javascript
+const list = ['apple', 'banana', 'orange'];  // -> solo guarda valores por item.
+```
+
+objects:
+
+````javascript
+
+const user = {
+    name: 'Jhon', // -> guarda propiedades(name) y valores para cada propiedad('Jhon')
+    age: 34,
+    hobby: 'soccer',
+};  ````
