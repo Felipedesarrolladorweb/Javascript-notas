@@ -131,7 +131,7 @@ Los objects se pueden guardar dentro de arrays y los arrays se pueden guardar de
 
 </br>  
 
-Arrays en objects:
+* _Arrays en objects:_
 
 ```javascript  
 const user = {
@@ -140,7 +140,15 @@ const user = {
 }  
 ```
 
-Objects en arrays
+Si se requiere llamar un contenido de un objeto dentro de una lista o array se debe hacer de esta forma, teniendo en cuenta el array ya hecho antes de este párrafo: 
+
+```javascript
+user.certificates[1]
+
+console.log(user.certificates[1])  // -> ['computer science', 'engineer', 'programming software']
+```
+
+* _Objects en arrays_
 
 ```javascript
 const certificateUsers = [ {
@@ -158,3 +166,10 @@ const certificateUsers = [ {
 ]
 ```  
 
+Si se requiere llamar un contenido de un objeto dentro de una lista o array se debe hacer de esta forma, teniendo en cuenta el array ya hecho antes de este párrafo:  
+
+```javascript
+certificateUsers[0].certificateArea;
+
+console.log(certificateUsers[0].certificateArea;) // -> computerscience
+```
