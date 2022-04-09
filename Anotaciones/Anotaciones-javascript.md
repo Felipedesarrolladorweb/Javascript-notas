@@ -22,7 +22,9 @@ Son los diferentes tipos de contenidos que javascript puede recibir y leer, son 
 
 </br>  
 
-Las arrays son listas en javascript que pueden guardar una serie de elementos de diferente tipo, aunque es recomendado guardar solo elementos del mismo tipo en una sola lista, generalmente mezclar elementos de diferente tipo en una sola lista puede generar conflictos en la lógica del programa.  
+Los arrays son listas en javascript que pueden guardar una serie de elementos de diferente tipo, aunque es recomendado guardar solo elementos del mismo tipo en una sola lista, generalmente mezclar elementos de diferente tipo en una sola lista puede generar conflictos en la lógica del programa. Los arrays no entran en la categoría de javascript types por la razón de que para el motor de javascript cada item sigue siendo un número, de ahí que se pueda indexar o acceder a un item de un array usando números ejm:  
+`array = ['item0','item1','item2','item3']`  
+para acceder a uno de ellos solo se escribe array[1]; y se accede al 'item1'.
 
 </br>  
 
@@ -30,7 +32,7 @@ Las arrays son listas en javascript que pueden guardar una serie de elementos de
 
 </br>  
 
-Algunos métodos a tener en cuenta para agregar, remover, concatenar, cambiar,etc, las arrays:  
+Algunos métodos a tener en cuenta para agregar, remover, concatenar, cambiar,etc, los arrays:  
 
 </br>  
 
@@ -103,7 +105,7 @@ console.log(array2[1][1]); // -> Array [ "Oranges" ]
 
 </br>  
 
-Los objects(objetos), son parecidos a las arrays, pues almacenan una lista de varios items, la diferencia es que en objects se pueden guardar una propiedad y un valor por cada item. ejm:  
+Los objects(objetos), son parecidos a los arrays, pues almacenan una lista de varios items, la diferencia es que en objects se pueden guardar una propiedad y un valor por cada item a diferencia de los arrays que cada item de la lista se guarda con el valor de un número y no se le puede asignar a cada item un nombre en específico. ejm:  
 
 arrays:  
 
@@ -114,9 +116,33 @@ const list = ['apple', 'banana', 'orange'];  // -> solo guarda valores por item.
 objects:
 
 ````javascript
-
 const user = {
     name: 'Jhon', // -> guarda propiedades(name) y valores para cada propiedad('Jhon')
     age: 34,
     hobby: 'soccer',
-};  ````
+};  
+
+user.favouriteFood = 'spinach'; // -> agrega un nuevo item llamado favouriteFood y su valor es de 'spinach' en el objeto 'user'  
+
+console.log(user); // -> da como resultado la lista anterior más el nuevo item agregado =   { name: "Jhon", age: 34, hobby: "soccer", favouriteFood: "spinach" }
+````
+
+Los objects se pueden guardar dentro de arrays y los arrays se pueden guardar dentro de objects también. ejm:  
+
+</br>  
+
+Objects:
+
+```javascript  
+const user = {
+    name: 'Jhon',
+    certificates: ['computer science', 'engineer', 'programming software']
+}  
+```
+
+Arrays
+
+```javascript
+const certificateUsers = [ 'Jhon', 'andrew', 'jack']
+```  
+
