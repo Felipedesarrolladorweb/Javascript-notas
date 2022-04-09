@@ -131,7 +131,7 @@ Los objects se pueden guardar dentro de arrays y los arrays se pueden guardar de
 
 </br>  
 
-Objects:
+Arrays en objects:
 
 ```javascript  
 const user = {
@@ -140,9 +140,21 @@ const user = {
 }  
 ```
 
-Arrays
+Objects en arrays
 
 ```javascript
-const certificateUsers = [ 'Jhon', 'andrew', 'jack']
+const certificateUsers = [ {
+    userName = 'Jhon',
+    certificateArea = 'computerscience',
+    }
+    {
+    userName = 'andrew',
+    certificateArea = 'computerscience',
+    }
+    {
+    userName = 'Jack',
+    certificateArea = 'computerscience',
+    }
+]
 ```  
 
