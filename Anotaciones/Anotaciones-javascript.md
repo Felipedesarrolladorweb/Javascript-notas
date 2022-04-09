@@ -197,3 +197,60 @@ console.log(objectVacio); // -> object {}
 console.log(items1); // -> array []
 ```
 
+## Facebook excercise  
+
+* Hacer un facebook mediante console.log y prompts, tendrá que tener que pedir nombre de usuario y contraseña y validar que sean las que están guardadas en las variables escritas y permitir ver lo que otros usuarioas han escrito en facebook y si no escribe bien la contraseña o usuario mandar un mensaje de error que diga que metió datos incorrectos:  
+
+</br>  
+
+```javascript
+const database = [
+    {
+        username: 'andrew',
+        password: 'supersecret'
+    }
+]
+
+const newsfeed = [
+    {
+        username: 'Bobby',
+        timeline: 'so tired from all that learning'
+    },
+    {
+        username: 'Sally',
+        timeline: 'Javascript is so cool!'
+    }
+];
+
+const userNamePrompt = prompt("What's your usename");
+const passwordPrompt = prompt("What's your password");
+
+function signIn(user, passw) {
+    if ( user === database[0].username &&
+        passw === database[0].password) {
+            console.log(newsfeed);
+        }else {
+            alert('Sorry, wrong username and password');
+        }
+}
+
+signIn(userNamePrompt, passwordPrompt);
+```
+
+En el anterior ejercicio se utilizó **_&&_**, y las funciones condicionales _**if**_ y _**else**_ estos métodos hacen parte de los **Javascript Logical Operators** y **Javascript Conditionals**.  
+
+</br>  
+
+## Javascript Logical Operators / Javascript conditionals  
+
+</br>  
+
+los **Javascript Logicals Operators**(Operadores lógicos), son usados para comparar un dato o variable o valor de otro, y analizar si son iguales o diferentes, generalmente se usan junto a los **Conditionals** para permitir o no permitir una acción y en caso de que no pase la comparativa, dar como una opción otra acción.
+
+**&&** Significa _**y**_, sólo da true como resultado si los dos valores o variables son iguales, de lo contrario así uno sea cierto y el otro no, no va a ejecutar la función.  
+
+**||** Significa _**o**_ y da la opción de que si al menos uno de los dos valores o variables es cierto puede permitir la función a realizar.  
+
+**!** Significa lo opuesto o _**false**_, en algunas ocasiones se necesita revertir el resultado de una variable a su valor lógico opuesto, si por ejemplo una variable da como resultado true, si le agregamos ! antes de la variable dará como resultado false , pasa lo mismo al revés.  
+
+Los **Conditionals** se usan generalmente junto a los Logical Operators, significan literalmente **if**(si tal cosa es cierta), y **else**(caso contrario...)
