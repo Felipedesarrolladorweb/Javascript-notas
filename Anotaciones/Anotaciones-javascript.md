@@ -451,3 +451,82 @@ todosimportant.forEach(logTodos); // -> da como resultado todos los items de la 
 Como se puede ver en el ejercicio anterior uno de los beneficios de separar la function de la declaraciónde forEach, es que podemos usar dicha function por aparte para ejecutar otro bloque de código en base a otros objetos, o arrays, de esa manera estaríamos ahorrando escribir código innecesario o repetido y aumentando la facilidad de lectura del código y optimizando la velocidad con que escribimos el código.  
 
 Para saber si una función está disponible o soportada en un explorador de internet o browser en específico(opera, safari, mozilla firefox, brave, google chrome, etc), se puede abrir una página cualquiera del navegador y abrir el modo conosla, escribir en caso de que sea una función: [].forEach y darle Enter, saldrá resultados como este: _**f**_ _forEach() { [native code] }_ dando a entender que ese browser sí soporta esa función.
+
+</br>  
+
+## Facebook excercise 2  
+
+</br>  
+
+En el siguiente ejemplo/ejercicio se usará uno de los **_Loops_** llamado **_for_**, para poder comprobar si el usuario que escribe sus datos de inicio de sesión está regustrado en la base de datos de los usarios registrados previamente:
+
+```javascript
+const database = [
+    {
+        username: 'andrew',
+        password: 'supersecret'
+    },
+    {
+        username: 'sally',
+        password: 'sally123'
+    },
+    {
+        username: 'ingrid',
+        password: 'ingrid123'
+    }
+]
+
+const newsfeed = [
+    {
+        username: 'Bobby',
+        timeline: 'so tired from all that learning'
+    },
+    {
+        username: 'Sally',
+        timeline: 'Javascript is so cool!'
+    },
+    {
+        username: 'Mitch',
+        timeline: 'Javascript is preetty cool!'
+    }
+];
+
+function isUserValid(username, password) {
+    for (let i=0; i < database.length; i++) {
+    if(database[i].username === username &&
+        database[i].password === password) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function signIn(username, password) {
+    if(isUserValid(username, password)) {
+        console.log(newsfeed);
+    } else {
+        alert('Sorry, wrong username and password');
+    }
+}
+
+const userNamePrompt = prompt("What's your usename");
+const passwordPrompt = prompt("What's your password");
+
+signIn(userNamePrompt, passwordPrompt);
+```
+
+**Algunos puntos a tener en cuenta**:  
+
+Para poder ejecutar todo el código se debe hacer un llamado, se escribe el nombre de la función principal que activa todo el código por decirlo así (en este caso `signIn(userNameprompt, passwordPrompt);` y como se puede notar, para poder ejecutar una function siempre debe escribirse al final dos paréntesis, signIn tiene entre paréntesis dos variables **userNamePrompt** y **passwordPrompt**, dichas variables guardan como valor una function la cual es `prompt("what's your username");`, así que al llamar la function `signIn(userNamePrompt, passwordPrompt);`, se está en primer lugar ejecutando la function signIn, la cual tiene dos argumentos dentro de su función(username, password) esos dos argumentos son 'definidos' de manera específica en el momento de llamarse la funcion sigIn pues entre paréntesis se modifica username y password por las variables userNamePrompt y passwordPrompt, que contienen una función prompt cada una, por lo tanto el proceso en orden sería así:
+
+* Se ejecuta la function signIn con argumentos entre paréntesis userNamePrompt y passwordPrompt.
+* El código busca donde se encuentran los argumentos usernamePrompt y passwordPrompt, y los encuentra como variables que contienen una function interna cada uno.
+* El código las ejecuta una por una en orden.
+* La página solicita que el usuario escriba su username y su password.
+* mientras solicita username de primero lo que el usuario escriba el código lo guarda como username y lo mete dentro de username en la function signIn.
+* El código pasa a verificar o ejecutar de primero username en el bloque de código de la function signIn
+* La function signIn pide hacer una verificación **_if / else_**, la cual verifica si la operación de la function isUserValid es true.  
+* El código pasa a ejecutar la function **_isUserValid_** la cual toma lo que  el usuario escribio como **username** y lo analiza dentro de un **_Loop_** tipo **_for_**, si resulta cierto, regresa el valor de _true_, si no lo es, regresa el valor de _false_.
+* El código vuelve a function **_signIn_** y valida el `if(isUserValid(username))`, si es _true_ entonces imprime el contenido de la variable **newsfeed**, si es _false_ ejecuta una **alert** con el mensaje 'Sorry, wrong username and password'.
+* Una vez que hace el proceso con **username**, vuelve y lo repite con **password**, le pide al usuario que escriba su password, guarda el contenido que el usuario escribió en password y valida si **_isUserValid_** regresa como _true_ o _false_.
+* Si regresa como _true_, imprime el contenido de la variable **newsfeed** en la consola de la página, si es false ejecuta la **alert**.
