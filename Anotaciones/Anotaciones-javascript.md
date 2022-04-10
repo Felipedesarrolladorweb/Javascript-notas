@@ -376,4 +376,43 @@ do {
 } while (counterTwo > 0);
 ```  
 
-El orden en **do while** es algo diferente, comienza con **do** significa **hacer**, hacer lo que esta entre corchetes del primer bloque de código en el cuál se imprime en consola el valor actual de counterTwo y luego se pasa a restar un valor de 2 a el valor actual de counterTwo, y luego de ejecutarlo, pasa a ejecutar el segundo bloque de código entre corchetes en el cual está la condicional **mientras**, mientras counterTwo sea mayor que 0 se repite todo el proceso
+El orden en **do while** es algo diferente, comienza con **do** significa **hacer**, hacer lo que esta entre corchetes del primer bloque de código en el cuál se imprime en consola el valor actual de counterTwo y luego se pasa a restar un valor de 2 a el valor actual de counterTwo, y luego de ejecutarlo, pasa a ejecutar el segundo bloque de código entre corchetes en el cual está la condicional **mientras**, mientras counterTwo sea mayor que 0 se repite todo el proceso.  
+
+</br>  
+
+* **For Each**  
+
+Este método Fué agregado en el ECMASCRIPT5(versión de javascript actualizado):  
+
+```javascript
+const todos = [
+    'clean room',
+    'brush teeths',
+    'excercise',
+    'study javascript',
+    'eat healthy'
+]
+
+todos.forEach(function(a, b) {
+    console.log(a, b); 
+})
+    /* Da como resultado:
+    clean room 0        app.js:105:13
+    brush teeths 1      app.js:105:13
+    excercise 2         app.js:105:13
+    study javascript 3  app.js:105:13
+    eat healthy 4       app.js:105:13*/  
+
+    /* dato importante, cuando se 
+    imprime algo por consola, en la parte derecha se muestra 
+    el número de la línea de código en la que se escribió el código
+    que indica u ordena imprimir o ejecutar el código completo, en este caso en 
+    la consola aparecerá en la parte derecha app.js:105:13, indicando
+    la línea en donde esta el código que ejecuta, esto es de ayuda
+    en casos cuando salen errores y queremos saber en dónde podemos
+    analizarlos. */
+```  
+
+_**forEach**_ toma cada _item_ de una variable, array,etc y escribimos que hacemos con esos _items/objetos_, pero primero guardamos cada item que se recibe, como _**argumentos**_ de una _**función/function**_(la cual en el código del ejemplo está sin definir, pues no se le ha puesto un nombre a dicha función), del array en una variable en este caso la variable **_'a'_**(o cualquiera que decida colocar),luego se indica que se imprima en la consola una variable **_'a'_**, de ese momento en adelante la variable **_'a'_**, tiene guardado cada item del array, por lo tanto en realidad se esta pidiendo que imprima el valor de la variable **_'a'_** que en este caso es un item del array, **_forEach_** tiene la tarea de tomar  cada item del array seleccionado por lo tanto el proceso se repetirá las veces que sean necesarias hasta completar todo el bloque de código indicado en todos los items que contiene el array.  
+
+si queremos acceder , o seleccionar el index o número de cada item del array todos, en forEach simplemente agregamos una nueva variable o función, en este caso es 'b', el código toma la variable o función que esté de segundo dentro de parentésis en function() y la asigna como una función para indexar los items del array.
