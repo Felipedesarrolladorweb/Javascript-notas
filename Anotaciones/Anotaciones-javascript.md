@@ -253,4 +253,63 @@ los **Javascript Logicals Operators**(Operadores lógicos), son usados para comp
 
 **!** Significa lo opuesto o _**false**_, en algunas ocasiones se necesita revertir el resultado de una variable a su valor lógico opuesto, si por ejemplo una variable da como resultado true, si le agregamos ! antes de la variable dará como resultado false , pasa lo mismo al revés.  
 
-Los **Conditionals** se usan generalmente junto a los Logical Operators, significan literalmente **if**(si tal cosa es cierta), y **else**(caso contrario...)
+Los **Conditionals** se usan generalmente junto a los Logical Operators, significan literalmente **if**(si tal cosa es cierta), y **else**(caso contrario...)  
+
+## Overview  
+
+</br>  
+
+* **Declaración de functions / Function declarations**  
+
+```javascript
+function newFunction() {
+
+}
+```  
+
+* **Function expression / Expresión de functions**  
+
+```javascript
+const newFunction = function() {
+
+}
+```  
+
+* **expressions / expresiones**  
+
+```javascript
+1+3;
+const a = 2;
+return true;
+```  
+
+* **calling or ejecuting a function / LLamar o ejecutar una Function**  
+
+```javascript
+alert();
+newFunction(param1, param2);
+```  
+
+* **assign a variable / asignar una variable**  
+
+```javascript
+const a = 1;
+```  
+
+* **function vs method**  
+
+```javascript
+
+estoesunaFunction();
+obj.estoesunMethod();
+
+function estoesunaFunction() {
+
+}
+
+const obj = {
+    estoesunMethod: function() {
+
+    }
+}
+```  
