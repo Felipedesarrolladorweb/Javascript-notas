@@ -313,3 +313,42 @@ const obj = {
     }
 }
 ```  
+
+</br>  
+
+## Loops en Javascript  
+
+</br>  
+
+Los loops son una forma de repetir un proceso en el código que se requiera repetir, se puede controlar las veces y que partes del código se repiten:  
+
+el siguiente ejercicio es un **todo list / lista de tareas** donde se repetira la variable **i** las veces que sean necesarias hasta terminar de nombrar cada item de la lista 'todos', la variable **i** tendrá un valor de cero, y mediante el código **i++** se le sumara 1 cada vez que se repita el código hasta que la variable **i** tenga el valor de 5 el cuál es el mismo valor que la cantidad de items en la lista **todo**, el cual en ese momento se detendra el proceso.  
+
+```javascript
+const todos = [
+    'clean room',
+    'brush teeths',
+    'excercise',
+    'study javascript',
+    'eat healthy'
+]  
+
+for (let i=0; i < todos.length; i++) {
+    console.log(todos[i]);
+} /* 
+clean room
+brush teeths
+excercise
+study javascript 
+eat healthy 
+*/
+```  
+
+El último bloque de código tiene tres declaraciones entre paréntesis, primero se define la variable i dandole el valor de cero, seguido se está haciendo una comparativa entre la variable i con valor definido cero y el length( largo o cantidad) de la variable todos(el cual tiene 5 items por lo tanto su length es de valor 5), luego seguido esta la variable i con dos signos de suma, indicando una suma de valor de 1 a la variable i aumentando su valor.  
+
+El proceso entonces sería: 
+
+* definir la variable i con el valor de cero  
+
+* si i es menor que la cantidad de items de la variable todos entonces se ejecuta el proceso interno que está entre corchetes({console.log...imprime el item de la variable **todos** que tenga el mismo número o valor que tiene en ese momento la variable i}), luego se ejecuta el último proceso o código de i++ que suma el valor de 1 a el valor que tiene la variable i, se repite el proceso completo hasta que i llegue a sumar el valor de 5 el cual es el mismo valor que la cantidad de items de la variable todos y de esa manera el console.log(todos[i]) va a imprimir los items de la variable todos uno por uno.  
+
