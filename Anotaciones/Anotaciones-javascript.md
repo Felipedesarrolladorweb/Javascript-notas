@@ -346,9 +346,34 @@ eat healthy
 
 El último bloque de código tiene tres declaraciones entre paréntesis, primero se define la variable i dandole el valor de cero, seguido se está haciendo una comparativa entre la variable i con valor definido cero y el length( largo o cantidad) de la variable todos(el cual tiene 5 items por lo tanto su length es de valor 5), luego seguido esta la variable i con dos signos de suma, indicando una suma de valor de 1 a la variable i aumentando su valor.  
 
-El proceso entonces sería: 
+El proceso entonces sería:  
 
 * definir la variable i con el valor de cero  
 
 * si i es menor que la cantidad de items de la variable todos entonces se ejecuta el proceso interno que está entre corchetes({console.log...imprime el item de la variable **todos** que tenga el mismo número o valor que tiene en ese momento la variable i}), luego se ejecuta el último proceso o código de i++ que suma el valor de 1 a el valor que tiene la variable i, se repite el proceso completo hasta que i llegue a sumar el valor de 5 el cual es el mismo valor que la cantidad de items de la variable todos y de esa manera el console.log(todos[i]) va a imprimir los items de la variable todos uno por uno.  
 
+También se pueden usar **while** y **do while** para hacer loops:  
+
+* **while**: 
+
+```javascript
+const counterOne = 10;
+while(counterOne > 0) {
+    console.log(counterOne);
+    counterOne--;
+}
+```  
+
+La palabra **while** significa **mientras**, mientras counterOne sea mayor que 0, entonces ejecutar el siguiente bloque de código(el que está entre corchetes {}), el bloque de código que está entre corchetes tiene console.log counterOne esto significa que va a aparecer en la conosla del sitio web el valor de la variable counterOne, luego hace la operación de counterOne-- que significa que al valor actual de counterOne se le resta una unidad o 1, como counterOne tiene un valot de 10 al restarle uno queda con valor de 9, y 9 sigue siendo mayor que 0, por lo tanto todo el proceso de while se repite hasta que   el valor sea cero.  
+
+* **do while**:
+
+```javascript
+const counterTwo = 10  
+do {
+    console.log(counterTwo);
+    counterTwo--;
+} while (counterTwo > 0);
+```  
+
+El orden en **do while** es algo diferente, comienza con **do** significa **hacer**, hacer lo que esta entre corchetes del primer bloque de código en el cuál se imprime en consola el valor actual de counterTwo y luego se pasa a restar un valor de 2 a el valor actual de counterTwo, y luego de ejecutarlo, pasa a ejecutar el segundo bloque de código entre corchetes en el cual está la condicional **mientras**, mientras counterTwo sea mayor que 0 se repite todo el proceso
