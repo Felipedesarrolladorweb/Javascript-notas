@@ -2,7 +2,7 @@
 
 ## Javascript Types  
 
-Son los diferentes tipos de contenidos que javascript puede recibir y leer, son la unidad más básica que existe en el motor del código, también se le llaman **_primitive types_**:
+Son los diferentes tipos de contenidos o valores que javascript puede recibir y leer, son la unidad más básica que existe en el motor del código, también se le llaman **_primitive types_**:
 
 * **Number**(Los números que normalmente se usan)  
 * **String**(Lo que conocemos como texto, javascript usa caracteres especiales para texto)
@@ -199,7 +199,7 @@ console.log(items1); // -> array []
 
 ## Facebook excercise  
 
-* Hacer un facebook mediante console.log y prompts, tendrá que tener que pedir nombre de usuario y contraseña y validar que sean las que están guardadas en las variables escritas y permitir ver lo que otros usuarioas han escrito en facebook y si no escribe bien la contraseña o usuario mandar un mensaje de error que diga que metió datos incorrectos:  
+* Hacer un facebook mediante console.log y prompts, tendrá que pedir nombre de usuario y contraseña y validar que sean las que están guardadas en las variables escritas y permitir ver lo que otros usuarioas han escrito en facebook y si no escribe bien la contraseña o usuario mandar un mensaje de error que diga que metió datos incorrectos:  
 
 </br>  
 
