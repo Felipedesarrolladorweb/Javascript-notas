@@ -9,7 +9,7 @@ Son los diferentes tipos de contenidos o valores que javascript puede recibir y 
 * **Boolean**(Lógica comparativa a lo que decimos true(verdadero) o false(falso), también el código lo toma como 1 ó 0, como algo con valor o algo sin valor o vacío).  
 * **Undefined**(es la manera de javascript de avisar que un archuvo o variable no tiene un valor definido o está vacío cuando no debería)  
 * **Null**(Es lo mismo que undefined pero es usado de manera voluntaria por parte del programador para asignar como vacío o nulo deliberadamente un objeto, así le hace saber al motor de javascript y al programador que analice después el código que ese valor(Null) fué designado por el programador por alguna razón).  
-* **Object**(significa objeto, )
+* **Object**(significa objeto,es una colección o conjunto de propiedades o **_properties_**, en la forma de nombres y valores, así que es un conjunto que guarda una lista de nombres con sus propiedades.)
 
 ## Data Structures / Estructura de datos  
 
@@ -316,7 +316,12 @@ const obj = {
 
 </br>  
 
-## Loops en Javascript  
+## Loops en Javascript 
+
+* **_for_**
+* **_while_**
+* **_do_**
+* **_forEach_**
 
 </br>  
 
@@ -416,3 +421,33 @@ todos.forEach(function(a, b) {
 _**forEach**_ toma cada _item_ de una variable, array,etc y escribimos que hacemos con esos _items/objetos_, pero primero guardamos cada item que se recibe, como _**argumentos**_ de una _**función/function**_(la cual en el código del ejemplo está sin definir, pues no se le ha puesto un nombre a dicha función), del array en una variable en este caso la variable **_'a'_**(o cualquiera que decida colocar),luego se indica que se imprima en la consola una variable **_'a'_**, de ese momento en adelante la variable **_'a'_**, tiene guardado cada item del array, por lo tanto en realidad se esta pidiendo que imprima el valor de la variable **_'a'_** que en este caso es un item del array, **_forEach_** tiene la tarea de tomar  cada item del array seleccionado por lo tanto el proceso se repetirá las veces que sean necesarias hasta completar todo el bloque de código indicado en todos los items que contiene el array.  
 
 si queremos acceder , o seleccionar el index o número de cada item del array todos, en forEach simplemente agregamos una nueva variable o función, en este caso es 'b', el código toma la variable o función que esté de segundo dentro de parentésis en function() y la asigna como una función para indexar los items del array.
+
+También se puede separar la definición de la función y aparte llamar la función con forEach:  
+
+```javascript
+const todos = [
+    'clean room',
+    'brush teeths',
+    'excercise',
+    'study javascript',
+    'eat healthy'
+]
+const todosImportant = [
+    'clean room!',
+    'brush teeths!',
+    'excercise!',
+    'study javascript!',
+    'eat healthy!'
+]
+
+function logTodos(todoitem, i) {
+    console.log(todoitem, i);
+}
+
+todos.forEach(logTodos); // -> da como resultado todos los items de la variable todos
+todosimportant.forEach(logTodos); // -> da como resultado todos los items de la variable todosImportant
+```  
+
+Como se puede ver en el ejercicio anterior uno de los beneficios de separar la function de la declaraciónde forEach, es que podemos usar dicha function por aparte para ejecutar otro bloque de código en base a otros objetos, o arrays, de esa manera estaríamos ahorrando escribir código innecesario o repetido y aumentando la facilidad de lectura del código y optimizando la velocidad con que escribimos el código.  
+
+Para saber si una función está disponible o soportada en un explorador de internet o browser en específico(opera, safari, mozilla firefox, brave, google chrome, etc), se puede abrir una página cualquiera del navegador y abrir el modo conosla, escribir en caso de que sea una función: [].forEach y darle Enter, saldrá resultados como este: _**f**_ _forEach() { [native code] }_ dando a entender que ese browser sí soporta esa función.
