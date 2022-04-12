@@ -529,4 +529,176 @@ Para poder ejecutar todo el código se debe hacer un llamado, se escribe el nomb
 * El código pasa a ejecutar la function **_isUserValid_** la cual toma lo que  el usuario escribio como **username** y lo analiza dentro de un **_Loop_** tipo **_for_**, si resulta cierto, regresa el valor de _true_, si no lo es, regresa el valor de _false_.
 * El código vuelve a function **_signIn_** y valida el `if(isUserValid(username))`, si es _true_ entonces imprime el contenido de la variable **newsfeed**, si es _false_ ejecuta una **alert** con el mensaje 'Sorry, wrong username and password'.
 * Una vez que hace el proceso con **username**, vuelve y lo repite con **password**, le pide al usuario que escriba su password, guarda el contenido que el usuario escribió en password y valida si **_isUserValid_** regresa como _true_ o _false_.
-* Si regresa como _true_, imprime el contenido de la variable **newsfeed** en la consola de la página, si es false ejecuta la **alert**.
+* Si regresa como _true_, imprime el contenido de la variable **newsfeed** en la consola de la página, si es false ejecuta la **alert**.  
+
+</b>  
+
+## Document Object Model  
+
+</b>  
+
+Javascript se usa principalmente para cambiar el contenido de un sitio web de maneras que HTML5, y CSS3 no podrían. Para poder modificar el contenido y estructura de un sitio web javascript  se vale de un método llamado Document Object Model. Javascript puede:  
+
+* Cambiar todos los elementos de HTML en un sitio web.  
+* Cambiar todos los atributos de HTML en una página  
+* Cambiar todos los estilo de CSS en la página  
+* Remover todos los ekementos existentes y atributos.  
+* Agregar nuevos elementos HTML y atributos  
+* Javascript puede reaccionar a todos los HTML eventos existentes en la página  
+* Puede crear nuevos veentos en la página.  
+
+La diferencia entre HTML, CSS y Javascript, es que mientras HTML y CSS pueden modificar elementos de la página, no puede hacerlo una vez la página esté cargada en el sitio web, su modificación se limita a relizarse antes de ser cargada y ejecutada en el navegador web, en cambio Javascript tiene la capacidad de cambiar o modificar todos los elementos de la página web **_mientras_** la página web esta en uso, funcionando y el usuario está visitándola e interactuando con ella.  
+
+En el momento que un sitio web carga, se crea el DOM(Document Object Model), el cuál permite modificar, agregar o eliminar elementos HTML y CSS dentro de la página web, ejm:  
+
+Si se carga cualquier página web, abrir la consola de desarrollo en la misma página web, y escribir **_document_**, darle enter para ejecuta el comando y aparecerá  un objeto llamado documento ese objeto es el DOM, si escribimos en la consola **__document.write('hello')_** y le damos ejecutar, la página web inmediatamente reescribirá sololo que escribimos en la consola, mediante document reescribimos todo el contenido de la p´gina web, sin embargo como es un sitio web ya construido por otros programadores, el cambio o modificación que hagamos en esa página será temporal, al volver a cargar la página se reestablecerá el contenido incial de la página.  
+
+Para hacer esto posible, cada navegador web tiene en sus servidores(donde se guarda la información que se dispone a los usuarios), un motor que compila y ejecuta el código javascript que nosotros escribamos o enviems mediante los archivos que hagamos y subamos al sitio web, por ejemplo, google tiene V8 engine, firefox tiene SpiderMonkey y Safari tiene Nitro.  
+
+`document.write('Hello');`  con este código estamos diciendo a el motor del navegador que escojamos para cargar la página web que el objeto document(toda la página agrupada en un objeto 'document'), realice un método o función el cual se lllama **write**, el cual ordena al motor del navegador web que escriba o sobreescriba en el caso de que la página web en que estemos ya tenga contenido, lo que nosotros escribimos entre parénteses justo al lado de la palabra write. El motor del navegador web toma esa instrucción como código javascript, lo lee, parte por parte y luego ejecuta el código, modificando los elementos que hayamos escrito de la página.  
+
+Document es un objeto el cual es por decirlo así lo que vemos e la pantalla al desplegar un a página web, ese objeto es un hijo de otro objeto mayor llamado window, el cual no sólo guarda el objeto document dentro de su function, sino que tambipen guarda al lado de document cientos de otras propiedades.  
+
+Como el object window es el que precede a todos los demás objetos de la página web, se puede usar la palabra `windows.alert('Hello');` y se ejecutará lalert normalmente, porque alert es uno de los objets pertenecientess a window, tanto si se escvribe alert('Hello'); como si se escribe window.alert('hello'); de cualquier manera la página web reconoce el código , sin embargo no se puede escribir windows.write('Hello'); porque la function o mehtod 'write', es peteneciente a document a pesar de que document sea perteneciente a window, write está dentro de document por lo tanto no puede ser accesado o llamado  por window, solo mediante document.  
+
+</br>  
+
+## Document Selectors  
+
+</br>  
+
+Los selectors seleccionan diferentes elementos de una página web para modificarlos.  
+
+* **_document.getElementsByTagName('h1')_**: Selecciona los elementos tag de HTML(h1, h2, p, div, etc).  
+
+* **_document.getElementsByClassName('Second-phrase')_**: Selecciona el elemento Class con el nombre dentro del paréntesis.
+
+* **_document.getElementsById('Firstsubtitle')_**: Selecciona un elemento Id que se llame Firstsubtitle.  
+
+* **_document.querySelector(); / document.querySelectorAll()_** : querySelector selecciona el primer elemento de el elemento que se especifique dentro del paréntesis, por ejemplo si es una lista solo seleccionara el primer li de la lista, querySlectorAll selecciona todos los elementos contenidos dentro del elemento especificado dentro del paréntesis. Se pueden especificar seleccionar uno o más elementos dentro del paréntesis. Generalmente se recomienda usar estos dos selectors en ves de los anteriores _getElement_, son más precisos y actualizados.  
+
+* **_getAttribute / setAttribute_**: se deben usar colocando primero _document.querySelector('Li').getAttribute('lista1');_ , se debe primero obtener el elemento al que se quiere especificar que atributo obtener(elementos y atributos son diferentes), y luego se escribe el atributo al que se quiere acceder, se obtendrá el contenido del atributo, si se escribe en la consola del navegador se podrá ver el contenido del atributo seleccionado, ejm:  
+
+```HTML
+<!DOCTYPE html>  
+<html>  
+<body>  
+<h1 numberattribute='37'> Javascript </h1>
+
+</body>
+</html>
+```  
+
+```javascript  
+// Javascript
+document.querySelector('h1').getAttribute('numberatttribute', '1000'); // -> <h1> numberattribute='1000'> Javascript <h1>
+```  
+
+los paréntesis después de escribir getAttribute son para indicar(de izquierda a derecha), primero, el nombre del atributo que queremos modificar, y segundo el contenido que queremos sobreescribir, borrando el contenido anterior, en este caso cambiamos el 37 por el 1000.  
+
+* **_style_**: asi queremos cambiar las propiedades de las clases en HTML(estilos), se puede usar 
+`document.querySelector().style.backgroundColor = 'blue';`  
+en el ejemplo anterior se cambia el color del fondo de el elemento h1 a color azul.  
+
+Sin embargo, no se recomienda usar style para cambiar propiedades de css en html, pues lo que realmente hace es escribir el estilo css en el elemento h1 de el documento html, y esto puede generar conflictos de prioridad con los estilos ya establecidos en css.  
+
+```HTML
+<!DOCTYPE html>  
+<html>  
+<body>  
+<h1 backgroundColor='blue'> Javascript </h1> <!-- Como se puede notar se escribió el estilo css dentro del elemento h1 en este archivo html, pero debería escribirse o modificarse dentro del archivo css, y en el elemento -->
+
+</body>
+</html>
+```  
+
+* **_className / classList:_** Se usa para agregar o modificar un estilo css en el archivo css, no se agrega o escribe el estilo dentro del elemento html sino dentro del archivo css, para eso debe tenerse en cuenta que se está especificando o pidiendo usar una clase ya declarada en el archivo css. className se usa generalmente para cambiar el estilo de una sola clase y elemento, mientras que classList se usa generalmente para cambiar las clases de varios elementos agrupados por ejemplo elementos 'li', aunque la diferencia está en que classList cuenta con tres opciones: add, remove, y toggle, las cuales(en orden): agregan una clase nueva sin borrar las anteriores, remove remueve todas las clases que previamente tenga y pone la nueva, y toggle intercambia entre agregar o quitar una clase nueva dependiendo de la acción, ejm:
+
+* **_Con className:_**
+
+```HTML
+<!-- HTML -->
+<h1> title </h1>
+```  
+
+```css
+/* CSS */
+.bluetitle {
+    background-color: blue;
+}
+```
+
+```javascript
+/* Javascript */
+document.querySelector('h1').className = '.bluetitle';
+```  
+
+* **_Con classList:_**  
+
+```HTML
+<!-- HTML -->
+<ul>
+    <li>Lista</li>
+    <li>Lista</li>
+    <li>Lista</li>
+    <li>Lista</li>
+</ul>
+```  
+
+```css
+/* CSS */
+.bluelista {
+    background-color: blue;
+}
+```
+
+```javascript
+/* Javascript */
+document.querySelector('li').className = '.bluelista';
+```  
+
+* **_Con classList_**: 
+
+```HTML
+<!-- HTML -->
+<ul>
+    <li>Lista</li>
+    <li>Lista</li>
+    <li>Lista</li>
+    <li>Lista</li>
+</ul>
+```  
+
+```css
+/* CSS */
+.bluelista {
+    background-color: blue;
+}
+```
+
+```javascript
+/* Javascript */
+document.querySelector('ul').classList.add('redletra'); //En este caso se agrega la clase redletra, más no reemplaza o sobreescribe en caso de que haya una clase ya escrita en el elemento <li> del archivo html.
+
+document.querySelector('ul').classList.remove('redletra');// en este caso se remueve o sobreescribe la clase que se haya escrito previamente en el mismo elemento <li> del archivo html, y se sobreescribe ela clase redletra.
+
+document.querySelector('ul').classList.toggle('redletra');//en este caso es parecido a add en el sentido de que no reemplaza ni sobreescribe ninguna clase que ya se haya esrito previamente en el elemento <li> del archivo html, pero agrega una acción adicional, cada vez que se ejecuta este código, se activa o desactiva la clase nueva('redletra) hahaciendo que el texto cambie entre tener la clase nueva y no tenerla-letra roja, luego letra normal.
+```  
+
+* **_innerHTML_**:  
+
+Se usa para sobreescribir nuevos elementos o contenido dentro de un elemento de un archivo HTML, o agregar un nuevo elemento HTML con su propio contenido, si se escribe el mismo elemento que ya existe en HTML, lo que hará será sobreescribir el anterior con el contenido nuevo, y si el elemento es nuevo solo se agregará a la página o HTML pero no removerá nada:  
+
+* _innerHTML Sobreescribe un elemento HTML con uno nuevo:_
+
+```html
+<h1>Título</h1>
+```
+
+```javascript  
+document.querySelector('h1').innerHTML = '<h1>Nuevo título</h1>';  
+```
+
+```html
+<h1>Nuevo título</h1>
+```
