@@ -174,8 +174,9 @@ const passwordPrompt = prompt("What's your password");
 
 signIn(userNamePrompt, passwordPrompt); */
 
-document.querySelector('h1').className = 'cooltitle';
+/* document.querySelector('h1').className = 'cooltitle';
 
 document.querySelector('ul').classList.add('redletra');
 
 document.querySelector('body').insertAdjacentHTML = '<h2>Nuevo título</h2>';
+ */

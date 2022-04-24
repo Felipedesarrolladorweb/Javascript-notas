@@ -7,7 +7,7 @@ Son los diferentes tipos de contenidos o valores que javascript puede recibir y 
 * **Number**(Los números que normalmente se usan)  
 * **String**(Lo que conocemos como texto, javascript usa caracteres especiales para texto)
 * **Boolean**(Lógica comparativa a lo que decimos true(verdadero) o false(falso), también el código lo toma como 1 ó 0, como algo con valor o algo sin valor o vacío).  
-* **Undefined**(es la manera de javascript de avisar que un archuvo o variable no tiene un valor definido o está vacío cuando no debería)  
+* **Undefined**(es la manera de javascript de avisar que un archivo o variable no tiene un valor definido o está vacío cuando no debería)  
 * **Null**(Es lo mismo que undefined pero es usado de manera voluntaria por parte del programador para asignar como vacío o nulo deliberadamente un objeto, así le hace saber al motor de javascript y al programador que analice después el código que ese valor(Null) fué designado por el programador por alguna razón).  
 * **Object**(significa objeto,es una colección o conjunto de propiedades o **_properties_**, en la forma de nombres y valores, así que es un conjunto que guarda una lista de nombres con sus propiedades.)
 
@@ -36,9 +36,9 @@ Algunos métodos a tener en cuenta para agregar, remover, concatenar, cambiar,et
 
 </br>  
 
-* _splice()_, se escribe primero el nombre de la variable que contiene el array, más u punto seguido, e inmediatamente se escribe '_splice_' seguido de unos paréntesis en donde se escribe el código para remover o agregar uno o varios elementos de la lista o array, dentro de los paréntesis se escribe en orden de izquierda a derecha:  
+* _splice()_, se escribe primero el nombre de la variable que contiene el array, más un punto seguido, e inmediatamente se escribe '_splice_' seguido de unos paréntesis en donde se escribe el código para remover o agregar uno o varios elementos de la lista o array, dentro de los paréntesis se escribe en orden de izquierda a derecha:  
 `array.splice( 4, 0, 'taste');`  
- el primer caracter tiene que ser un número indica en que lugar se quiere agregar o remover contando desde 0 en adelante en la posición de los itms de la lista, el siguiente caracter es otro número que indicará cauántos items de la lista se borrarán, si no se desea borrar ningún item de la lista, simplemente escribir 0, después del segundo número se puede escribir entre paréntesis el item que se quiere agregar en la lista, el código quedaría así:  
+ el primer caracter tiene que ser un número indica en que lugar se quiere agregar o remover contando desde 0 en adelante en la posición de los items de la lista, el siguiente caracter es otro número que indicará cuántos items de la lista se borrarán, si no se desea borrar ningún item de la lista, simplemente escribir 0, después del segundo número se puede escribir entre paréntesis el item que se quiere agregar en la lista, el código quedaría así:  
 
 </br>  
 
@@ -56,7 +56,7 @@ console.log(array);
 
 * _`array.reverse();`_ , se usa para ordenar al revés una lista o array de más a menos.  
 
-* _`array.sort((a, b) => a > b);`_ , se usa para reordenar de la forma deseada una lista o array, se escribe el nombre de la variable que contiene el array luego un punto, luego el nombre sort más el resto entre paréntesis, las letras a y b dentro del primer paréntesis son para indicar el orden primero en que se desea ordenar los items de la lista, y las letras a > b, se usan para indicar el orden final o el que se verá reflejado en el resultado, el signo mayor que(>) es para indicar hacis donde va el orden de la lista, a > b indicaría que la lista va de manera ascendente de primero hacia abajo desde la primera letra del alfabeto hasta la última, indicando un orden progresivo dependiendo del tipo de items en la lista esto significa un orden ascendente como de 1 a 100, si se cambia de b < a significa que queremos que la lista esté ordenada desde la última letra del alfabeto o item de la lista hasta la primera.  
+* _`array.sort((a, b) => a > b);`_ , se usa para reordenar de la forma deseada una lista o array, se escribe el nombre de la variable que contiene el array luego un punto, luego el nombre sort más el resto entre paréntesis, las letras a y b dentro del primer paréntesis son para indicar el orden primero en que se desea ordenar los items de la lista, y las letras a > b, se usan para indicar el orden final o el que se verá reflejado en el resultado, el signo mayor que(>) es para indicar hacis donde va el orden de la lista, a > b indicaría que la lista va de manera ascendente de primero hacia abajo desde la primera letra del alfabeto hasta la última, indicando un orden progresivo dependiendo del tipo de items en la lista esto significa un orden ascendente como de 1 a 100, si se cambia de b > a significa que queremos que la lista esté ordenada desde la última letra del alfabeto o item de la lista hasta la primera.  
 
 
 </br>  
@@ -145,28 +145,28 @@ Si se requiere llamar un contenido de un objeto dentro de una lista o array se d
 ```javascript
 user.certificates[1]
 
-console.log(user.certificates[1])  // -> ['computer science', 'engineer', 'programming software']
+console.log(user.certificates[1])  // -> 'engineer'
 ```
 
 * _Objects en arrays_
 
 ```javascript
 const certificateUsers = [ {
-    userName = 'Jhon',
-    certificateArea = 'computerscience',
-    }
+    userName: 'Jhon',
+    certificateArea: 'computerscience',
+    },
     {
-    userName = 'andrew',
-    certificateArea = 'computerscience',
-    }
+    userName: 'andrew',
+    certificateArea: 'computerscience',
+    },
     {
-    userName = 'Jack',
-    certificateArea = 'computerscience',
+    userName: 'Jack',
+    certificateArea: 'computerscience',
     }
 ]
 ```  
 
-Si se requiere llamar un contenido de un objeto dentro de una lista o array se debe hacer de esta forma, teniendo en cuenta el array ya hecho antes de este párrafo:  
+Si se requiere llamar un contenido de un objeto dentro de un objeto, dentro de una lista o array se debe hacer de esta forma, teniendo en cuenta el array ya hecho antes de este párrafo:  
 
 ```javascript
 certificateUsers[0].certificateArea;
@@ -199,7 +199,7 @@ console.log(items1); // -> array []
 
 ## Facebook excercise  
 
-* Hacer un facebook mediante console.log y prompts, tendrá que pedir nombre de usuario y contraseña y validar que sean las que están guardadas en las variables escritas y permitir ver lo que otros usuarioas han escrito en facebook y si no escribe bien la contraseña o usuario mandar un mensaje de error que diga que metió datos incorrectos:  
+* Hacer un facebook mediante console.log y prompts, tendrá que pedir nombre de usuario y contraseña y validar que sean las que están guardadas en las variables escritas y permitir ver lo que otros usuarios han escrito en facebook y si no escribe bien la contraseña o usuario mandar un mensaje de error que diga que metió datos incorrectos:  
 
 </br>  
 
@@ -245,7 +245,7 @@ En el anterior ejercicio se utilizó **_&&_**, y las funciones condicionales _**
 
 </br>  
 
-los **Javascript Logicals Operators**(Operadores lógicos), son usados para comparar un dato o variable o valor de otro, y analizar si son iguales o diferentes, generalmente se usan junto a los **Conditionals** para permitir o no permitir una acción y en caso de que no pase la comparativa, dar como una opción otra acción.
+los **Javascript Logicals Operators**(Operadores lógicos), son usados para comparar un dato o variable o valor, de otro, y analizar si son iguales o diferentes, generalmente se usan junto a los **Conditionals** para permitir o no permitir una acción y en caso de que no pase la comparativa, dar como una opción otra acción.
 
 **&&** Significa _**y**_, sólo da true como resultado si los dos valores o variables son iguales, de lo contrario así uno sea cierto y el otro no, no va a ejecutar la función.  
 
@@ -551,7 +551,7 @@ La diferencia entre HTML, CSS y Javascript, es que mientras HTML y CSS pueden mo
 
 En el momento que un sitio web carga, se crea el DOM(Document Object Model), el cuál permite modificar, agregar o eliminar elementos HTML y CSS dentro de la página web, ejm:  
 
-Si se carga cualquier página web, abrir la consola de desarrollo en la misma página web, y escribir **_document_**, darle enter para ejecuta el comando y aparecerá  un objeto llamado documento ese objeto es el DOM, si escribimos en la consola **__document.write('hello')_** y le damos ejecutar, la página web inmediatamente reescribirá sololo que escribimos en la consola, mediante document reescribimos todo el contenido de la p´gina web, sin embargo como es un sitio web ya construido por otros programadores, el cambio o modificación que hagamos en esa página será temporal, al volver a cargar la página se reestablecerá el contenido incial de la página.  
+Si se carga cualquier página web, abrir la consola de desarrollo en la misma página web, y escribir **_document_**, darle enter para ejecuta el comando y aparecerá  un objeto llamado documento ese objeto es el DOM, si escribimos en la consola **_document.write('hello')_** y le damos ejecutar, la página web inmediatamente reescribirá sololo que escribimos en la consola, mediante document reescribimos todo el contenido de la p´gina web, sin embargo como es un sitio web ya construido por otros programadores, el cambio o modificación que hagamos en esa página será temporal, al volver a cargar la página se reestablecerá el contenido incial de la página.  
 
 Para hacer esto posible, cada navegador web tiene en sus servidores(donde se guarda la información que se dispone a los usuarios), un motor que compila y ejecuta el código javascript que nosotros escribamos o enviems mediante los archivos que hagamos y subamos al sitio web, por ejemplo, google tiene V8 engine, firefox tiene SpiderMonkey y Safari tiene Nitro.  
 
@@ -559,7 +559,7 @@ Para hacer esto posible, cada navegador web tiene en sus servidores(donde se gua
 
 Document es un objeto el cual es por decirlo así lo que vemos e la pantalla al desplegar un a página web, ese objeto es un hijo de otro objeto mayor llamado window, el cual no sólo guarda el objeto document dentro de su function, sino que tambipen guarda al lado de document cientos de otras propiedades.  
 
-Como el object window es el que precede a todos los demás objetos de la página web, se puede usar la palabra `windows.alert('Hello');` y se ejecutará lalert normalmente, porque alert es uno de los objets pertenecientess a window, tanto si se escvribe alert('Hello'); como si se escribe window.alert('hello'); de cualquier manera la página web reconoce el código , sin embargo no se puede escribir windows.write('Hello'); porque la function o mehtod 'write', es peteneciente a document a pesar de que document sea perteneciente a window, write está dentro de document por lo tanto no puede ser accesado o llamado  por window, solo mediante document.  
+Como el object window es el que precede a todos los demás objetos de la página web, se puede usar la palabra `window.alert('Hello');` y se ejecutará lalert normalmente, porque alert es uno de los objets pertenecientess a window, tanto si se escvribe alert('Hello'); como si se escribe window.alert('hello'); de cualquier manera la página web reconoce el código , sin embargo no se puede escribir windows.write('Hello'); porque la function o mehtod 'write', es peteneciente a document a pesar de que document sea perteneciente a window, write está dentro de document por lo tanto no puede ser accesado o llamado  por window, solo mediante document.  
 
 </br>  
 
@@ -571,9 +571,9 @@ Los selectors seleccionan diferentes elementos de una página web para modificar
 
 * **_document.getElementsByTagName('h1')_**: Selecciona los elementos tag de HTML(h1, h2, p, div, etc).  
 
-* **_document.getElementsByClassName('Second-phrase')_**: Selecciona el elemento Class con el nombre dentro del paréntesis.
+* **_document.getElementsByClassName('Second-phrase')_**: Selecciona el elemento Class.
 
-* **_document.getElementsById('Firstsubtitle')_**: Selecciona un elemento Id que se llame Firstsubtitle.  
+* **_document.getElementsById('Firstsubtitle')_**: Selecciona un elemento Id, eneste caso, que se llame Firstsubtitle.  
 
 * **_document.querySelector(); / document.querySelectorAll()_** : querySelector selecciona el primer elemento de el elemento que se especifique dentro del paréntesis, por ejemplo si es una lista solo seleccionara el primer li de la lista, querySlectorAll selecciona todos los elementos contenidos dentro del elemento especificado dentro del paréntesis. Se pueden especificar seleccionar uno o más elementos dentro del paréntesis. Generalmente se recomienda usar estos dos selectors en ves de los anteriores _getElement_, son más precisos y actualizados.  
 
@@ -612,7 +612,7 @@ Sin embargo, no se recomienda usar style para cambiar propiedades de css en html
 </html>
 ```  
 
-* **_className / classList:_** Se usa para agregar o modificar un estilo css en el archivo css, no se agrega o escribe el estilo dentro del elemento html sino dentro del archivo css, para eso debe tenerse en cuenta que se está especificando o pidiendo usar una clase ya declarada en el archivo css. className se usa generalmente para cambiar el estilo de una sola clase y elemento, mientras que classList se usa generalmente para cambiar las clases de varios elementos agrupados por ejemplo elementos 'li', aunque la diferencia está en que classList cuenta con tres opciones: add, remove, y toggle, las cuales(en orden): agregan una clase nueva sin borrar las anteriores, remove remueve todas las clases que previamente tenga y pone la nueva, y toggle intercambia entre agregar o quitar una clase nueva dependiendo de la acción, ejm:
+* **_className / classList:_** Se usa para agregar o modificar un estilo css en el archivo css, no se agrega o escribe el estilo dentro del elemento html sino dentro del archivo css, para eso debe tenerse en cuenta que se está especificando o pidiendo usar una clase ya declarada en el archivo css. className se usa generalmente para cambiar el estilo de una sola clase y elemento, mientras que classList se usa generalmente para cambiar las clases de varios elementos agrupados por ejemplo elementos 'li', aunque la diferencia está en que classList cuenta con tres opciones: add, remove, y toggle, las cuales(en orden): agregan una clase nueva sin borrar las anteriores, remove remueve la clase indicada, y toggle intercambia entre agregar o quitar una clase nueva dependiendo de la acción, ejm:
 
 * **_Con className:_**
 
@@ -631,30 +631,6 @@ Sin embargo, no se recomienda usar style para cambiar propiedades de css en html
 ```javascript
 /* Javascript */
 document.querySelector('h1').className = '.bluetitle';
-```  
-
-* **_Con classList:_**  
-
-```HTML
-<!-- HTML -->
-<ul>
-    <li>Lista</li>
-    <li>Lista</li>
-    <li>Lista</li>
-    <li>Lista</li>
-</ul>
-```  
-
-```css
-/* CSS */
-.bluelista {
-    background-color: blue;
-}
-```
-
-```javascript
-/* Javascript */
-document.querySelector('li').className = '.bluelista';
 ```  
 
 * **_Con classList_**: 
@@ -680,9 +656,9 @@ document.querySelector('li').className = '.bluelista';
 /* Javascript */
 document.querySelector('ul').classList.add('redletra'); //En este caso se agrega la clase redletra, más no reemplaza o sobreescribe en caso de que haya una clase ya escrita en el elemento <li> del archivo html.
 
-document.querySelector('ul').classList.remove('redletra');// en este caso se remueve o sobreescribe la clase que se haya escrito previamente en el mismo elemento <li> del archivo html, y se sobreescribe ela clase redletra.
+document.querySelector('ul').classList.remove('redletra');// en este caso se remueve la clase 'redletra'.
 
-document.querySelector('ul').classList.toggle('redletra');//en este caso es parecido a add en el sentido de que no reemplaza ni sobreescribe ninguna clase que ya se haya esrito previamente en el elemento <li> del archivo html, pero agrega una acción adicional, cada vez que se ejecuta este código, se activa o desactiva la clase nueva('redletra) hahaciendo que el texto cambie entre tener la clase nueva y no tenerla-letra roja, luego letra normal.
+document.querySelector('ul').classList.toggle('redletra');// agrega una acción adicional, cada vez que se ejecuta este código, se activa o desactiva la clase nueva('redletra') haciendo que el texto cambie entre tener la clase redletra o quitarla.
 ```  
 
 * **_innerHTML_**:  
@@ -701,4 +677,46 @@ document.querySelector('h1').innerHTML = '<h1>Nuevo título</h1>';
 
 ```html
 <h1>Nuevo título</h1>
-```
+```  
+
+* **_Cache Selectors_**: Almacenar los Selectors en variables para poder ahorrar memoria en el navegador y tiempo de carga, por ejemplo en ves de escribir cada vez que se necesite seleccionar cierto elemento, se define una vez y se guarda esa acción en una variable, de ahi ena delante cada ve que se necesite dicho elemento, solo se escribe el nombre de la variable en la cual esta guardado la selección de dicho elemento:  
+
+```javascript
+var h1 = document.querySelector('h1');
+```  
+
+## Events  
+
+</br>  
+
+Los **Events**(Eventos), son acciones generalmente hechas por un usuario, como hacer click, mover el cursor encima de un elemento en el sitio web, scroll, o escribir algo en la barra de búsqueda. Así que nosotros podemos escuchar estos eventos y reaccionar a ellos usando javascript.  
+
+ejemplo:  
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript + Dom</title>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+    </head>
+    <body>
+        <h1>Shopping list</h1>
+        <p id='first'>Get it done today</p>
+        <p class='second'>No excuses</p>
+        <button>Click me!</button>
+        <ul>
+            <li class='bold red' random='23'>Notebook</li>
+            <li>Hello</li>
+            <li>Spinach</li>
+            <li>Rice</li>
+            <li>Birthday Cake</li>
+            <li>Candles</li>
+        </ul>
+        <script type='text/javascript' src='script.js'></script>
+    </body>
+</html>  
+
+```  
+
+```javascript  
